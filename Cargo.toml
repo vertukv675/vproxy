@@ -1,0 +1,18 @@
+[package]
+name = "vproxy"
+version = "0.1.0"
+edition = "2021"
+authors = ["vertukv"]
+
+[dependencies]
+async-socks5 = "0.5.1"
+colored = "2.0.0"
+confy = "0.5.1"
+rand = "0.8.5"
+rusqlite = "0.29.0"
+serde = "1.0.158"
+serde_derive = "1.0.158"
+socks5-async = "0.1.4"
+socks5-proto = "0.3.3"
+socks5-server = "0.8.3"
+tokio = { version = "1.26.0", features = ["full"] }

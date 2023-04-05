@@ -1,0 +1,4 @@
+# Vproxy config file
+# Format: ip port protocol priority login passwd (login and passwd = noauth if there is no auth on proxy server)
+# Example: 127.0.0.1 9050 socks5 1
+proxies = [ {ip = 127.0.0.1, port = 9050, protocol = "socks5", priority = 1, login = "noauth", password = "noauth"}] 

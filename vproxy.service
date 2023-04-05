@@ -1,0 +1,23 @@
+[Unit]
+Description=Vproxy service
+After=network.target
+
+[Service]
+Type=simple
+NotifyAccess=all
+ExecStart=/usr/local/bin/vproxy
+ExecReload=/bin/kill -HUP ${MAINPID}
+KillSignal=SIGINT
+TimeoutSec=60
+WatchdogSec=1m
+LimitNOFILE=32768
+Restart=on-failure
+RestartSec=10
+RemainAfterExit=yes
+
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=vproxy
+ 
+[Install]
+WantedBy=multi-user.target
